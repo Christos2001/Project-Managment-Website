@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="../../../css/main.css">
+    <link type="text/css" rel="stylesheet" href="../../../css/signup.css">
+    <link type="text/css" rel="stylesheet" href="../../../css/navbar_footer.css">
+    <link type="text/css" rel="stylesheet" href="../../../css/back_button.css">
+    <title>Create Step</title>
+</head>
+<body>
+     <div id="topnav">
+            <a href="../mainu.php">Home</a>
+            <a href="../../../phpPages/myProfile.php">Profile</a>
+            <a href="myProjects.html">My Projects</a>
+            <div id="authButtons">
+                <a class="left-corner" href="/php/logout.php">Logout</a>
+            </div>
+    </div>
+
+
+
+    <div id = "container" >
+        <a id="backL" ><button id="backB">BACK</button></a>
+
+        <div id="basic_form">
+           <form id="myForm" action="/php/createStep.php"  method="POST" enctype="multipart/form-data"> 
+                <h2>CREATE PROJECT</h2>
+                <ul>
+                    <li>
+                        <h3>Give title</h3>
+                        <input type="text" name="title" required>
+                    </li>
+                    <li>
+                        <h3>Subject</h3>
+                        <textarea id = "subject" name="subject" cols = "33" rows="5"></textarea>
+                    </li>
+                    <li>
+                        <h3>Assign user</h3>
+                        <input type="text" name="Iassign" class="Iassign" placeholder="Enter username" required>
+                    </li>              
+                    <input type="hidden" name="id" id="idInput" >
+                    <li>
+                        <h3>Attach file</h3>
+                        <input type="file" name="Descfile" accept="image/*, .doc, .docx, .pdf">
+                    </li>
+
+                </ul>
+
+                <button id="submit" type="Create">Create</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        const url = new URL(window.location.href);
+        const searchParams = url.searchParams;
+
+        const id = searchParams.get('id');//list id
+        a = document.getElementById('idInput').value = id;
+ 
+
+        let backL = document.getElementById("backL");
+        
+        if(searchParams.get("prev") == "P"){
+            backL.href = "projects.html?id="+id+"&page=1"
+        }else{
+            backL.href = "myProjects.html"
+        }
+        
+    </script>
+    
+
+    
+
+
+
+
+
+    
+</body>
+<script src="../../../js/checkFileSize.js"></script>
+
+</html>
+

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  type="text/css" href="../../../css/steps.css?v=1.1">
+    <link  type="text/css" rel='stylesheet' href="../../../css/navbar_footer.css">
+    <link  type="text/css" rel='stylesheet' href="../../../css/pagination.css">
+
+
+    <title>Steps</title>
+</head>
+<body>
+
+
+
+
+   <div id="topnav">
+            <a href="../mainu.php">Home</a>
+            <a href="../../../phpPages/myProfile.php">Profile</a>
+            <a href="myProjects.html">My Projects</a>
+            <div id="authButtons">
+                <a class="left-corner" href="/php/logout.php">Logout</a>
+            </div>
+    </div>
+
+    <div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div id="assignedMembers">
+        <h4>Assigned Members:</h4>
+        <p id="membersP"></p>
+    </div>
+  </div>
+
+</div>
+<button id="btnAddProject"><a id="addProject">+ Add Step</a>  </button>
+<div id="container2">
+    
+   <div id="grid1">
+        <div class = "project">
+            <h5 class="title"></h5>
+            <button class="deleteStep">Delete Step</button>
+            <button class="modalBtn" >See members</button>
+            <div class="row">
+                <h4 class="descTitle">Project description file:</h4><a class="descfile"  target="_blank" rel="noopener noreferrer">Open file</a>
+            </div>
+            <h2 dataset-id ="1" class="status"></h2>
+            <textarea  class="TextProject" readonly></textarea>
+            <button class="idAssign">Assign someone to step</button>
+            <form class="assignForm"  >
+                <input type="text" name="Iassign" class="Iassign" placeholder="Enter username here"  required>
+                <button type="submit" class="assign" name="assignForm"  >Assign</button>
+                <input type="hidden" name="pid" class="pid">
+            </form>
+            <button class="edit">Edit status</button>
+            <form class="statusForm"  method="POST">
+                <select name="status" class="cstatus" >
+                                <option value="In progress">In progress</option>
+                                <option value="Completed">Completed</option>
+                </select>
+                <button class="saveStatus" type="submit"  name="statusForm">Save</button>
+                <input type="hidden" name="pid2" class="pid2">
+            </form>
+            <div class="solutionFile">
+                <form class="solutionForm"  method="POST" enctype="multipart/form-data"> 
+                    <input type="file" name="sol_file" accept="image/*, .doc, .docx, .pdf">
+                    <button class="ufile" type="submit" name="solutionForm">Upload solution file</button>
+                    <input type="hidden" name="pid3" class="pid3">
+                </form>
+                <div class="row">
+                    <h4 class="solTitle">Project solution file:</h4>
+                    <a class="solfile"  target="_blank" rel="noopener noreferrer">Open file</a>
+                </div>
+                <form method="POST" class="approvalForm"  action="/php/approveStep.php">
+                    <h4>Set approval:</h4>
+                    <label><input type="radio" name="approve" value="1"> Approve</label>
+                    <label><input type="radio" name="approve" value="0"> Disapprove</label>
+                    <button class="sapprove" type="submit" name="approveForm">Submit</button>
+                    <input type="hidden" name="pid4" class="pid4">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="grid2">
+        <div class = "project">
+            <h5 class="title"></h5>
+            <button class="deleteStep">Delete Step</button>
+            <button class="modalBtn" >See members</button>
+
+            <div class="row">
+                <h4 class="descTitle">Project description file:</h4><a class="descfile"  target="_blank" rel="noopener noreferrer">Open file</a>
+            </div>            <textarea name="" class="TextProject" readonly></textarea>
+
+            <h2 class="status"></h2>
+            <button class="idAssign">Assign someone to step</button>
+            <form class="assignForm"  method="POST">
+                <input type="text" name="Iassign" class="Iassign" placeholder="Enter username here"  required>
+                <button class="assign" name="assignForm" >Assign</button>
+                <input type="hidden" name="pid" class="pid" class="pid3">
+            </form>
+            <button class="edit">Edit status</button>
+            <form class="statusForm"  method="POST">
+                <select name="status" class="cstatus" >
+                                <option value="In progress">In progress</option>
+                                <option value="Completed">Completed</option>
+                </select>
+                <button class="saveStatus" type="submit"   name="statusForm">Save</button>
+                <input type="hidden" name="pid2" class="pid2">
+
+            </form>
+            <div class="solutionFile">
+            
+                <form class="solutionForm"  method="POST" enctype="multipart/form-data"> 
+                    <input type="file" name="sol_file" accept="image/*, .doc, .docx, .pdf">
+                    <button class="ufile" type="submit" name="solutionForm">Upload solution file</button>
+                    <input type="hidden" name="pid3" class="pid3">
+                </form>
+                <div class="row">
+                    <h4 class="solTitle">Project solution file:</h4>
+                    <a class="solfile"  target="_blank" rel="noopener noreferrer">Open file</a>
+                </div>
+                <form method="POST" class="approvalForm" action="/php/approveStep.php">
+                    <h4>Set approval:</h4>
+                    <label><input type="radio" name="approve" value="1"> Approve</label>
+                    <label><input type="radio" name="approve" value="0"> Disapprove</label>
+                    <button class="sapprove" type="submit" name="approveForm">Submit</button>
+                    <input type="hidden" name="pid4" class="pid4">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="grid3" >
+        <div class = "project" >
+            <h5 class="title"></h5>
+            <button class="deleteStep">Delete Step</button>
+            <button class="modalBtn" >See members</button>
+
+            <div class="row">
+                <h4 class="descTitle">Project description file:</h4><a class="descfile"  target="_blank" rel="noopener noreferrer">Open file</a>
+            </div>
+            <textarea name="" class="TextProject " readonly></textarea>
+            <h2 class="status"></h2>
+            <button class="idAssign">Assign someone to step</button>
+            <form class="assignForm"  method="POST">
+                <input type="text" name="Iassign" class="Iassign" placeholder="Enter username here"  required>
+                <button class="assign"  name="assignForm" >Assign</button>
+                <input type="hidden" name="pid" class="pid" class="pid3">
+            </form>
+            <button class="edit">Edit status</button>
+            <form class="statusForm"  id="statusForm3" action="#statusForm3" method="POST">
+                <select name="status" class="cstatus" >
+                                <option value="In progress">In progress</option>
+                                <option value="Completed">Completed</option>
+                </select>
+                <button class="saveStatus" type="submit"   name="statusForm">Save</button>
+                <input type="hidden" name="pid2" class="pid2" class="pid4">
+
+            </form>
+            <div class="solutionFile">
+            
+                <form class="solutionForm"  method="POST" enctype="multipart/form-data"> 
+                    <input type="file" name="sol_file" accept="image/*, .doc, .docx, .pdf">
+                    <button class="ufile" type="submit" name="solutionForm">Upload solution file</button>
+                    <input type="hidden" name="pid3" class="pid3">
+                </form>
+                <div class = "row">
+                    <h4 class="solTitle">Project solution file:</h4>
+                    <a class="solfile"  target="_blank" rel="noopener noreferrer">Open file</a>
+                </div>
+                <form method="POST" class="approvalForm" action="/php/approveStep.php" >
+                    <h4>Set approval:</h4>
+                    <label><input type="radio" name="approve" value="1"> Approve</label>
+                    <label><input type="radio" name="approve" value="0"> Disapprove</label>
+                    <button class="sapprove" type="submit" name="approveForm">Submit</button>
+                    <input type="hidden" name="pid4" class="pid4">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="grid4">
+        <div class = "project">
+            <h5 class="title"></h5>
+            <button class="deleteStep">Delete Step</button>
+            <button class="modalBtn" >See members</button>
+
+            <div class="row">
+                <h4 class="descTitle">Project description file:</h4><a class="descfile"  target="_blank" rel="noopener noreferrer">Open file</a>
+            </div>
+            <textarea name="" class="TextProject " readonly></textarea>
+            <h2 class="status"></h2>
+            <button class="idAssign">Assign someone to step</button>
+            <form class="assignForm"  method="POST">
+                <input type="text" name="Iassign" class="Iassign" placeholder="Enter username here"  required>
+                <button class="assign" name="assignForm" >Assign</button>
+                <input type="hidden" name="pid" class="pid">
+
+            </form>
+            <button class="edit">Edit status</button>
+            <form class="statusForm"  method="POST" >
+                <select name="status" class="cstatus" >
+                                <option value="In progress">In progress</option>
+                                <option value="Completed">Completed</option>
+                </select>
+                <button class="saveStatus"  type="submit"   name="statusForm" >Save</button>
+                <input type="hidden" name="pid2" class="pid2">
+
+            </form>
+            <div class="solutionFile">
+            
+                <form class="solutionForm"  method="POST" enctype="multipart/form-data"> 
+                    <input type="file" name="sol_file" accept="image/*, .doc, .docx, .pdf">
+                    <button class="ufile" type="submit" name="solutionForm">Upload solution file</button>
+                    <input type="hidden" name="pid3" class="pid3">
+                </form>
+                <div class="row">
+                    <h4 class="solTitle">Project solution file:</h4>
+                    <a class="solfile"  target="_blank" rel="noopener noreferrer">Open file</a>
+                </div>  
+                <form method="POST" class="approvalForm" action="/php/approveStep.php">
+                    <h4>Set approval:</h4>
+                    <label><input type="radio" name="approve" value="1"> Approve</label>
+                    <label><input type="radio" name="approve" value="0"> Disapprove</label>
+                    <button class="sapprove" type="submit" name="approveForm">Submit</button>
+                    <input type="hidden" name="pid4" class="pid4">
+                </form>  
+            </div>
+        </div>
+    </div>
+
+    <div id="grid5">
+        <div class = "project">
+            <h5 class="title"></h5>
+            <button class="deleteStep">Delete Step</button>
+            <button class="modalBtn" >See members</button>
+            <div class="row">
+                <h4 class="descTitle">Project description file:</h4><a class="descfile"  target="_blank" rel="noopener noreferrer">Open file</a>
+            </div>
+            <textarea name="" class="TextProject " readonly></textarea>
+            <h2 class="status"></h2>
+            <button class="idAssign">Assign someone to step</button>
+            <form class="assignForm"  method="POST">
+                <input type="text" name="Iassign" class="Iassign" placeholder="Enter username here"  required>
+                <button class="assign" name="assignForm" >Assign</button>
+                <input type="hidden" name="pid" class="pid">
+
+            </form>
+            <button class="edit">Edit status</button>
+            <form class="statusForm"  method="POST">
+                <select name="status" class="cstatus" >
+                                <option value="In progress">In progress</option>
+                                <option value="Completed">Completed</option>
+                </select>
+                <button class="saveStatus"  type="submit"   name="statusForm">Save</button>
+                <input type="hidden" name="pid2" class="pid2">
+
+            </form>
+            <div class="solutionFile">
+            
+                <form class="solutionForm"  method="POST" enctype="multipart/form-data"> 
+                    <input type="file" name="sol_file" accept="image/*, .doc, .docx, .pdf">
+                    <button class="ufile" type="submit" name="solutionForm">Upload solution file</button>
+                    <input type="hidden" name="pid3" class="pid3">
+                </form>
+                <div class="row">
+                    <h4 class="solTitle" >Project solution file:</h4>
+                    <a class="solfile"  target="_blank" rel="noopener noreferrer">Open file</a>
+                </div>
+                <form method="POST" class="approvalForm" action="/php/approveStep.php">
+                    <h4>Set approval:</h4>
+                    <label><input type="radio" name="approve" value="1"> Approve</label>
+                    <label><input type="radio" name="approve" value="0"> Disapprove</label>
+                    <button class="sapprove" type="submit" name="approveForm">Submit</button>
+                    <input type="hidden" name="pid4" class="pid4">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="grid6">
+        <div class = "project">
+            <h5 class="title"></h5>
+            <button class="deleteStep">Delete Step</button>
+            <button class="modalBtn" >Open Modal</button>
+            <div class="row">
+                <h4 class="descTitle">Project description file:</h4><a class="descfile"  target="_blank" rel="noopener noreferrer"> Open file</a>
+            </div>
+            <textarea name="" class="TextProject " readonly></textarea>
+            <h2 class="status"></h2>
+            <button class="idAssign">Assign someone to step</button>
+            <form class="assignForm"  method="POST">
+                    <input type="text" name="Iassign" class="Iassign" placeholder="Enter username here"  required>
+                    <button class="assign" name="assignForm" >Assign</button>
+                    <input type="hidden" name="pid" class="pid">
+
+                </form>
+                <button class="edit">Edit status</button>
+                <form class="statusForm"  method="POST" >
+                    <select name="status" class="cstatus" >
+                                    <option value="In progress">In progress</option>
+                                    <option value="Completed">Completed</option>
+                    </select>
+                    <button class="saveStatus" type="submit"   name="statusForm">Save</button>
+                    <input type="hidden" name="pid2" class="pid2">
+
+             </form>
+             <div class="solutionFile">
+            
+               <form class="solutionForm"  method="POST" enctype="multipart/form-data"> 
+                    <input type="file" name="sol_file" accept="image/*, .doc, .docx, .pdf">
+                    <button class="ufile" type="submit" name="solutionForm">Upload solution file</button>
+                    <input type="hidden" name="pid3" class="pid3">
+                </form>
+                <div class="row">
+                    <h4 class="solTitle">Project solution file:</h4>
+                    <a class="solfile"  target="_blank" rel="noopener noreferrer">Open file</a>
+                </div>
+                <form method="POST" class="approvalForm" action="/php/approveStep.php">
+                    <h4>Set approval:</h4>
+                    <label><input type="radio" name="approve" value="1"> Approve</label>
+                    <label><input type="radio" name="approve" value="0"> Disapprove</label>
+                    <button class="sapprove" type="submit" name="approveForm">Submit</button>
+                    <input type="hidden" name="pid4" class="pid4">
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    
+ 
+    
+</div>
+
+
+<div id="switchPage"  >
+    <button id="prevPage" onclick="previousPage()">Previous Page</button>
+    <button id="page1" class="page" onclick="pageOne()">&ensp;&ensp;1&ensp;&ensp;</button>
+    <button id="page2" class="page" onclick="pageTwo()">&ensp;&ensp;2&ensp;&ensp;</button>
+    <button id="page3" class="page" onclick="pageThree()">&ensp;&ensp;&ensp;3&ensp;&ensp;</button>
+    <button id="nextPage" onclick="nextPage()">&ensp;&ensp;&ensp;Next Page</button>
+</div>
+
+    
+</body>
+
+<script  src="../../../js/steps.js?v=1.2.3"></script>
+
+
+</html>

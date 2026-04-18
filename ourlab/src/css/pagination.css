@@ -1,0 +1,48 @@
+#switchPage{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    bottom: 0px;
+} 
+
+#switchPage button {
+    background-color: #1e1e1e;
+    color:white;
+    border: 1px solid #333;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+
+#switchPage button:hover{
+    cursor: pointer;           
+    transition: 0.3s; 
+
+    background-color: #252525;
+    border-color: #007bff;
+    color: #bbb;
+}
+
+
+
+
+#prevPage, #nextPage {
+    font-weight: bold;
+    border-radius: 8px;
+}
+#nextPage{
+    padding-right: 25px!important;
+}
+
+
+
+
+
+

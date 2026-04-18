@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"type="text/css" href="../../../css/main.css">
+    <link id='theme' type="text/css" rel='stylesheet' href="../../../css/navbar_footer.css?v=1.0">
+    <link id='theme' type="text/css" rel='stylesheet' href="../../../css/projects.css?v=1.0">
+    <link id='theme' type="text/css" rel='stylesheet' href="../../../css/pagination.css?v=1.0">
+    <title>My Projects</title>
+</head>
+<body>
+
+  <div id="topnav">
+            <a href="../mainu.php">Home</a>
+            <a href="../../../phpPages/myProfile.php">Profile</a>
+            <a href="myProjects.html">My Projects</a>
+            <div id="authButtons">
+                <a class="left-corner" href="/php/logout.php">Logout</a>
+            </div>
+    </div>
+
+<div id="row">
+    <form id="searchForm" name="searchForm" method="GET">
+                <h2 id="searchTitle">Search by title</h2>
+                <input type="text" id="searchT" name="searchT" placeholder="Type 'all' to see all lists">
+    </form>
+        
+    <button id="crtProBtn"><a href="createProject.html">Create project</a></button>
+</div>
+<div id="container1">
+    
+
+        <div id="grid1" class="exer">
+            <div class ="project" >
+                <button class="btnAddProject"><a class="addProject">+ Add Step</a>  </button>
+                <form method="POST" class="fremPro" action="/php/delete_project.php"><button type="submit" class="remProject"> Remove Project</button> <input class="hidRem" name="hidden" type="hidden">    </form>
+                <a class="enterList" >
+                    <h2 class = "title"></h2>
+                    <h3 class = "creator"></h3>
+                    <h5 class = "date"></h5>
+                </a>
+        </div>
+    </div>
+        <div id="grid2" class="exer">
+                <div class ="project">
+                <button class="btnAddProject"><a class="addProject">+ Add Step</a>  </button> 
+                <form method="POST" class="fremPro" action="/php/delete_project.php"><button class="remProject"  >  Remove Project </button>  <input class="hidRem" name="hidden" type="hidden"></form>                
+                <a class="enterList">
+                    <h2 class = "title"></h2>
+                    <h3 class = "creator"></h3>
+                    <h5 class = "date"></h5>
+                </a>
+                </div>
+        </div>
+        <div id="grid3" class="exer">
+            <div class ="project">
+                <button class="btnAddProject"><a class="addProject">+ Add Step</a>  </button>
+                <form method="POST" class="fremPro" action="/php/delete_project.php"><button class="remProject"  >  Remove Project</button>  <input class="hidRem" name="hidden" type="hidden"></form>                
+                <a class="enterList">
+                    <h2 class = "title"></h2>
+                    <h3 class = "creator"></h3>
+                    <h5 class = "date"></h5>
+                </a>
+            </div>
+        </div>
+        
+        <div id="grid4" class="exer">
+            <div class ="project">
+            <button class="btnAddProject"><a class="addProject">+ Add Step</a>  </button>  
+            <form method="POST" class="fremPro" action="/php/delete_project.php"><button class="remProject"  >  Remove Project</button>  <input class="hidRem" name="hidden" type="hidden"></form>                
+                <a class="enterList">
+                    <h2 class = "title"></h2>
+                    <h3 class = "creator"></h3>
+                    <h5 class = "date"></h5>
+                </a>
+            </div>
+        </div>
+        <div id="grid5" class="exer">
+            <div class ="project">
+            <button class="btnAddProject"><a class="addProject">+ Add Step</a>  </button>  
+            <form method="POST" class="fremPro" action="/php/delete_project.php" ><button class="remProject"  >  Remove Project </button>  <input class="hidRem" name="hidden" type="hidden"></form>                
+                <a class="enterList">
+                    <h2 class = "title"></h2>
+                    <h3 class = "creator"></h3>
+                    <h5 class = "date"></h5>
+                </a>
+            </div>
+        </div>
+        <div id="grid6" class="exer">
+            <div class ="project">
+                <button class="btnAddProject"><a class="addProject">+ Add Step</a>  </button>  
+                <form method="POST" class="fremPro"  action="/php/delete_project.php"><button class="remProject" >  Remove Project</button>  <input class="hidRem" name="hidden" type="hidden"></form>                
+                <a class="enterList">
+                    <h2 class = "title"></h2>
+                    <h3 class = "creator"></h3>
+                    <h5 class = "date"></h5>
+                </a>
+            </div>
+        </div>
+
+        
+</div>
+
+    
+
+
+<div id="switchPage"  >
+    <button id="prevPage" onclick="previousPage()">Previous Page</button>
+    <button id="page1" class="page" onclick="pageOne()">&ensp;&ensp;1&ensp;&ensp;</button>
+    <button id="page2" class="page" onclick="pageTwo()">&ensp;&ensp;2&ensp;&ensp;</button>
+    <button id="page3" class="page" onclick="pageThree()">&ensp;&ensp;&ensp;3&ensp;&ensp;</button>
+    <button id="nextPage" onclick="nextPage()">&ensp;&ensp;&ensp;Next Page</button>
+</div>
+
+
+
+
+
+
+    
+</body>
+<script src="../../../js/project.js?v=1.2.3"></script>
+ 
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,27 @@
+#backB{
+    background-color: rgb(99, 99, 197);
+    position: relative;
+    float: left;
+    margin-top: 30px;
+    margin-left: 30px;
+    color: #333;
+    font-weight: 700;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border-width: 1px;
+    cursor: pointer;
+}
+
+
+#backB:hover{
+    color:white;
+}
+
+#backB:active{
+    color:white;
+}
+
+
+#backL{
+    text-decoration: none;
+}

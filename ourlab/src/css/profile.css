@@ -1,0 +1,91 @@
+.container {
+    width: 100%; 
+    margin: 0 auto; 
+  }
+  
+  #MYprofile {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px auto;
+    width: 800px;
+    display: flex;
+  }
+  
+  #MYprofile h2 {
+    color: #7c0000;
+    margin: 10px 0;
+
+  }
+  
+  #MYprofile p {
+    margin: 10px 0;
+  }
+  
+  #MYprofile button {
+    background-color: #007bff; 
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  #MYprofile button:hover {
+    background-color: #0056b3; 
+  }
+  
+
+#fname{
+  padding-top: 30px;
+}
+
+#fname h2{
+    display: inline;
+    flex:1;
+    padding-right: 10px; 
+}
+
+
+#cred{ 
+    flex: 1;
+    padding-right: 20px; 
+
+}
+
+#contact {
+    flex: 1;
+}
+#backP {
+    width: 300px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+#dltALL {
+    background-color: #dc3545; 
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+#dltALL:hover {
+    background-color: #a71d2a; 
+    transform: scale(1.02);   
+}
+
+
+#dltALL.container {
+    background-color: #8b1a25;
+    transform: scale(0.98);    
+}

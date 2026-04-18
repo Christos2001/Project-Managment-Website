@@ -1,0 +1,36 @@
+services:
+  website:
+    build: .
+    ports:
+      - "8080:80" 
+    volumes:
+      - ./img:/var/www/html/img:ro      # Images (Strictly Read-Only)
+      - ./src:/var/www/html            
+      - ./files:/var/www/private_data   # files seperatly for protection
+      - /var/www/html/vendor           
+    networks:
+      - app-network
+    env_file:
+      - .env
+
+
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_ROOT_PASSWORD: ${DB_PASS}
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./sql/schema.sql:/docker-entrypoint-initdb.d/schema.sql
+      - db_data:/var/lib/mysql
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  db_data:

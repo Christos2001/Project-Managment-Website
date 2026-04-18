@@ -1,0 +1,204 @@
+
+body{
+    background-color: #333;
+}
+
+#container1{ 
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr ;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+#row {
+    display: flex;
+    justify-content: center; 
+    gap: 15px; 
+                    
+}
+
+#crtProBtn a{
+    color: white;
+}
+#crtProBtn {
+    height: 70px;
+    padding: 18px 35px;        
+    font-size: 18px;           
+    font-weight: 800;           
+    text-transform: uppercase;  
+    letter-spacing: 1px;        
+    
+
+    background-color: #1a1a1a;;
+    border: none;
+    border-radius: 15px;        
+    
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+    box-shadow: 0 10px 20px rgba(0, 123, 255, 0.3);
+    white-space: nowrap;
+    margin-right: 50px;
+    margin-top: 30px;
+}
+
+#crtProBtn:hover {
+    background-color: #252525;    
+    border-color: #444;           
+    color: #ffffff;
+    box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3); 
+    transform: translateY(-3px);  
+}
+
+a {
+    text-decoration: none !important;
+}
+
+a  h2.title,
+a  h3.creator,
+a  h5.date {
+    color: white ; 
+}
+
+#searchForm{
+margin-left:50px;
+flex-grow: 1;
+}
+#searchTitle{
+    color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 300;
+    font-size: 28px;
+}
+
+#searchT {
+    background-color: #1e1e1e;
+    color: white;
+    border: 1px solid #333;
+    padding: 12px 25px;
+    width: 100%;
+    max-width: 650px; 
+    border-radius: 30px; 
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+#searchT:focus {
+    border-color: #007bff; 
+    background-color: #252525; 
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.3); 
+    width: 100%;
+    max-width: 480px; 
+}
+
+#searchT::placeholder {
+    color: #777;
+    font-style: italic;
+}
+
+.enterList{
+    margin: 0;
+}
+
+.btnAddProject {
+    position: absolute;
+    top: 0;
+    height: 38px;
+    margin: 0px;
+    float: right!important;
+    margin-top: 10px;
+    margin-right:10px;
+    border-radius: 6px;
+    background-color: rgba(255, 71, 87, 0.1);
+    color: #2ed573!important;
+    border: 1px solid #2ed573;
+    cursor: pointer;
+}
+
+.addProject{
+    color: #2ed573;
+}
+
+.btnAddProject:hover{
+    background-color: rgba(46, 213, 115, 0.3); 
+    border-color: #55efc4; 
+    transform: translateY(-2px); 
+    transition: all 0.3s ease;
+}
+
+.remProject{
+    position: absolute;
+    top: 0;
+    left: 300px;
+    height: 38px;
+    margin-top: 10px;
+    margin-right:10px;
+    float: right!important;
+    border-radius: 6px;
+    background-color: rgba(255, 71, 87, 0.1);
+    color: #ff4757;
+    border: 1px solid #ff4757;
+    cursor: pointer;
+}
+
+.remProject:hover{
+    background-color: rgba(255, 71, 87, 0.3); 
+    border-color: #ff4757; 
+    transform: translateY(-2px); 
+    transition: all 0.3s ease;
+
+}
+
+.remProject::before {
+    content: '\2715'; 
+}
+
+
+.project{
+    position: relative;
+    border-style: ridge;
+    background-color:#1e1e1e;
+    border-radius: 3%;
+    border-width: 2px;
+    height:100px;
+    width: 346px;
+    padding: 30px;
+    margin-bottom: 30px;
+    margin-left: 50px;
+    z-index: 0.9;
+    box-shadow: 0 10px 25px rgba(108, 59, 18, 0.4);
+    border: 1px solid #7a7a7a;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px); 
+    border-color: #007bff;      
+}
+
+.title {
+    white-space: nowrap;        
+    overflow: hidden;          
+    text-overflow: ellipsis;   
+    color: #ffffff;
+    font-size: 24px;
+    margin: 25px 0 10px 0;
+}
+
+.creator {
+    color: #007bff;
+    font-size: 16px;
+    margin: 25px 0 5px 0;
+}
+
+.date {
+    color: #777;
+    font-size: 13px;
+    margin: 0;
+}
+
+
