@@ -197,7 +197,7 @@ This is the "Backlog" of features I plan to implement when time permits.
 - RemoteIP Dependency: Once site-wide proxying is enabled, a2enmod remoteip will be required to ensure the server logs the visitor's IP instead of Cloudflare's.
 
 ## 🛠️ Setup & Installation
- - In the schema.sql, there are already 2 insertions for testing
+ - In the schema.sql, there are already 2 user insertions for testing
     - username: bob1 , alice_dev
     - password : password123
  - Email (SMTP): Since the app uses PHPMailer, you need an "App Password" using Gmail you can create one [here](https://myaccount.google.com/apppasswords)
