@@ -12,7 +12,25 @@ This project is built using:
 - **Database:** SQL  
 - **Email Service:** PHPMailer  
 - **Security:** Cloudflare (bot protection & verification)  
-- **Environment:** Docker  
+- **Environment:** Docker
+
+### 📂 Basic App Structure
+ourlab/ <br>
+├── files/               # Permanent storage for uploaded documents <br>
+│   ├── descriptions/    <br>
+│   └── solutions/       <br>
+├── sql/                    # Database initialization <br>
+├── src/                 <br>
+│   ├── css/             <br>
+│   ├── html/             <br>
+│   ├── img/             # Contains Home page static image <br>
+│   ├── js/              <br>
+│   ├── php/             <br>
+│   └── phpPages/        # The viewable php pages of the application <br>
+├── .env.example         # Template for environment configuration <br>
+├── composer.json        # (PHPMailer) <br>
+├── Dockerfile           <br>
+└── docker-compose.yml   <br>
 
 ---
 ## 🛡️Security
