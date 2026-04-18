@@ -83,10 +83,6 @@ A step contains:
 - Status 
 - Solution file
 
-❗**Note**
-- A Step status is **Pending** when is created.Assigned users transition the step **In progress** and then to **Completed**.
-Once Completed, the creator has to approve or dissaprove the solution. If the step is approved is getting green flagged else
-it's back to in progress position.
 
 - Description and solution file allowed types:
 🖼️ Images 🖼️
