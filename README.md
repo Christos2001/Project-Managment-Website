@@ -204,5 +204,5 @@ This is the "Backlog" of features I plan to implement when time permits.
  - Cloudflare Turnstile Configuration: Log in to [Cloudflare Dashboard](https://dash.cloudflare.com/login). Navigate to Turnstile in the Application Security section which is on the side menu.Add a new site and get your Site Key and Secret Key.
  - Rename .env.example to .env
    - Fill the variables with the requested values.
- - Open Command Prompt, navigate to the project folder (ourlab), and run *docker compose up*
+ - Open Command Prompt, navigate to the project folder (ourlab), and run *docker compose up -d*
  - Then access: http://localhost:8080/html/main.html
