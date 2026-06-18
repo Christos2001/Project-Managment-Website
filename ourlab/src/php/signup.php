@@ -25,9 +25,8 @@
         exit();
     }
 
-    if (empty($fname) || empty($lname) || empty($username) || empty($password){
+    if (empty($fname) || empty($lname) || empty($username) || empty($password){ //html code bypassed
             echo '<script type="text/javascript">';
-            echo 'alert("Wrong email address.");';
             echo 'window.history.back()';//use back, so user's input is not lost, (works most of the time)
             echo '</script>';
             exit();
