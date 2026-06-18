@@ -25,7 +25,7 @@
         exit();
     }
 
-    if (empty($fname) || empty($lname) || empty($username) || empty($password){ //html code bypassed
+    if (empty($fname) || empty($lname) || empty($username) || empty($password)){ //html code bypassed
             echo '<script type="text/javascript">';
             echo 'window.history.back()';//use back, so user's input is not lost, (works most of the time)
             echo '</script>';
