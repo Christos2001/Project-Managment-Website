@@ -1,8 +1,8 @@
 <?php 
 
         require_once $_SERVER['DOCUMENT_ROOT'].'/php/secure_cookies.php';
-        session_start();
         require_once $_SERVER['DOCUMENT_ROOT'].'/php/connect_to_DB.php';
+        session_start();
         
 
         $user = $_POST["username"];
